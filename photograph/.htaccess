@@ -1,0 +1,7 @@
+
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^photograph\.abdurrahmanws\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.photograph\.abdurrahmanws\.com$
+RewriteRule ^/?$ "http\:\/\/aanphotograph\.tumblr\.com\/" [R=301,L]
+

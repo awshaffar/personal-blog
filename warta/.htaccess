@@ -1,0 +1,7 @@
+
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^warta\.abdurrahmanws\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.warta\.abdurrahmanws\.com$
+RewriteRule ^/?$ "http\:\/\/wartaaan\.blogspot\.com" [R=301,L]
+

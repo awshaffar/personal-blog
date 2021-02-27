@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="1.6" type="template" client="site">
+	<name>cebgray</name>
+	<creationDate>23/02/2011</creationDate>
+	<author>Caner Batman</author>
+	<authorEmail>kontakt@ceb-webdesign.de</authorEmail>
+	<authorUrl>http://www.ceb-seo.de</authorUrl>
+	<copyright>CEB-SEO</copyright>
+	<license>Creative Commons Attribution-Share Alike 3.0 Unported License</license>
+	<version>1.0.0</version>
+	<description>cebgray is a free Joomla template, designed by ceb-seo.de - Please don't remove the link (ceb-seo.de) in the footer - thank you!</description>
+
+	<files>
+		<folder>css</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>functions.php</filename>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>license.txt</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>templateDetails.xml</filename>
+	</files>
+
+	<positions>
+		<position>toolbar</position>
+		<position>search</position>
+		<position>search2</position>
+		<position>header</position>
+		<position>left</position>
+		<position>footer</position>
+		<position>footerleft</position>
+		<position>footerright</position>
+		<position>breadcrumb</position>
+	</positions>
+	
+	<languages folder="language">
+		<language tag="de-DE">de-DE/de-DE.tpl_cebgray.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_cebgray.ini</language>
+	</languages>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+				<field name="logo" type="media" hide_default="1" label="Logo" description="Logo" />
+
+				<field name="sitetitle" type="text" default="" label="Title (header)" description="Title (in the header)" filter="string" />
+				
+				<field name="slogan" type="text" default="" label="Slogan" description="Slogan" filter="string" />
+				
+				<field name="html5" type="list" default="0" label="HTML5" description="HTML5" filter="int">
+					<option value="0">XHTML</option>
+					<option value="1">HTML5</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

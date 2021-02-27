@@ -1,0 +1,406 @@
+@import "dropdown.css";
+body {
+	margin:0 auto;
+	padding: 0;
+	background:url('../images/background.jpg') transparent;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	border:0;
+	color:#6F6F6F;
+}
+p {
+	line-height:1.7em;
+	margin:8px 0;
+}
+em {
+	font-weight:bold;
+}
+a:link, a:visited {
+	color:#0075FF;
+}
+a:hover, a:active, a:focus {
+	text-decoration:none;
+	color: gray;
+}
+img {
+	border: 0 none;
+}
+h1 {
+	color:#2FA2FF;
+	font-weight:normal
+}
+h2 {
+	font-size:24px;
+	color:#0075FF;
+	font-weight:normal;
+}
+h3 {
+	color:#0075FF;
+	font-weight:normal;
+}
+h4 {
+	color:#2FA2FF;
+	font-weight:normal;
+}
+fieldset {
+	border:solid 1px #ccc;
+	margin-bottom:12px;
+}
+.article-info {
+	color:#999;
+}
+#template {
+	width:980px;
+	height:100%;
+	background-color:#FFF;
+	margin:0 auto;
+	font-size:12px;
+}
+#main {
+	width:900px;
+	margin:0 auto;
+}
+#logo {
+	height:80px;
+	width:500px;
+	padding-top:20px;
+	float:left;
+}
+#slogan {
+	height:80px;
+	width:400px;
+	padding-top:20px;
+	float:right;
+	font-size: 24px;
+	color:silver;
+}
+#topnavi {
+	height:62px;
+	width:900px;
+	background:url('../images/topnav.png') no-repeat;
+}
+/* 
+search 
+*/
+#topnavi form .inputbox {
+	background:#FFF !important;
+}
+#topnavi form .inputbox:focus {
+	border:solid 2px #000;
+}
+#search {
+	position:relative;
+	top:4px;
+	float:right;
+	width:200px;
+}
+#search2 {
+	height:20px;
+	position:relative;
+	top:-12px;
+}
+#search form {
+	padding-top:3px;
+}
+#header {
+	height:200px;
+	background:url('../images/header.png') no-repeat;
+}
+#inheader {
+	padding:0 10px;
+	background-color:white;
+	float:right;
+	margin-top:80px;
+}
+/*
+Wegweiser
+*/
+.breadcrumbs {
+	color:#666;
+}
+.breadcrumbs a:link, .breadcrumbs a:visited {
+	color:#0075FF;
+}
+.breadcrumbs a:hover, .breadcrumbs a:active, .breadcrumbs a:focus {
+	background:#0075FF;
+	color:#fff;
+}
+#leftsidebar {
+	width:300px;
+	float:left;
+	margin-top:-5px;
+}
+div.moduletable h3 {
+	font-size:24px;
+	color:#0075FF;
+	font-weight:normal;
+	margin:0 0 24px 0;
+	padding:0;
+}
+.sep {
+	height:24px
+}
+#leftsidebar div.moduletable {
+	width: 300px;
+	padding: 10px 0 20px 0;
+}
+#leftsidebar div.moduletable ul.latestnews, #leftsidebar div.moduletable ul.menu, #leftsidebar div.moduletable ul.archive-module {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#leftsidebar div.moduletable ul.latestnews li, #leftsidebar div.moduletable ul.menu li, #leftsidebar div.moduletable ul.archive-module li {
+	margin-top: 2px;
+	list-style: none;
+}
+#leftsidebar div.moduletable ul.latestnews li a, #leftsidebar div.moduletable ul.menu li a, #leftsidebar div.moduletable ul.archive-module li a {
+	display: block;
+	height: 14px;
+	color: #6F6F6F;
+	background:url('../images/navleft.png') no-repeat;
+	text-decoration: none;
+	padding: 10px 0 14px 35px;
+	border:1px solid silver;
+}
+#leftsidebar div.moduletable ul.latestnews li a:hover, #leftsidebar div.moduletable ul.menu li a:hover, #leftsidebar div.moduletable ul.archive-module li a:hover {
+	background-color: #dddfe3;
+}
+#content_small {
+	width:550px;
+}
+#content_big {
+	width:850px;
+}
+#content_small, #content_big {
+	float:right;
+	margin:0;
+	/*margin:10px 0;*/
+	padding-bottom:12px;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color:#6F6F6F;
+	overflow:hidden;
+}
+#content_small h2, #content_big h2 {
+	margin:5px 0 24px 0;
+}
+.pcontent {
+	padding: 5px 0 15px 5px;
+	border-bottom:1px solid silver;
+}
+.readmore a, a.readmore {
+	color:#0075FF;
+	margin-top:10px;
+	display:block;
+	position:relative
+}
+#contentbottom_blank, #contentbottom {
+	background-color:#2A2A2A;
+	width:860px;
+	height:100%;
+	padding: 10px 20px;
+	margin-top:30px;
+	color:white;
+	position:relative;
+}
+#contentbottom_blank {
+	background-color:#FFF;
+}
+.flL {
+	float:left
+}
+.flR {
+	float:right
+}
+.clr {
+	clear:both;
+}
+#contentbottomleft_small, #contentbottomright_small {
+	width:400px;
+}
+#contentbottomleft_big, #contentbottomright_big {
+	width:800px;
+}
+#contentbottomleft h2, #contentbottomright h2 {
+	color:#2FA2FF;
+}
+#footer {
+	color:gray;
+	margin-top:20px;
+}
+#footer a {
+	color:gray;
+	width:100%;
+	height:100%;
+}
+#end {
+	height:40px;
+}
+.copyright {
+	position:absolute;
+	bottom:-32px;
+	left:0;
+	color:silver;
+}
+
+.copyright a {
+color:silver;
+text-decoration:none;
+}
+/*
+Login Modul
+**/
+.pretext {
+}
+fieldset.userdata {
+	border:none
+}
+p.form-login-username {
+}
+fieldset.userdata label {
+}
+fieldset.userdata input, fieldset.userdata button {
+	float:right
+}
+/*
+Form
+*/
+fieldset, input {
+}
+div#content_small div.login form, div#content_big div.login form {
+	width:340px;
+}
+.m10 {
+	margin-top:10px;
+}
+/**
+Register Form
+**/
+div.registration fieldset dt {
+	width:20%;
+	float:left;
+	margin-bottom:12px;
+	clear:left
+}
+div.registration fieldset dd {
+	width:70%;
+	float:right;
+	margin-bottom:12px
+}
+/*
+Article
+*/
+h2.article-title {
+	width:74%;
+	float:left
+}
+ul.actions {
+	list-style:none;
+	clear:right;
+	width:18%;
+	float:right;
+}
+ul.actions li {
+	list-style:none;
+	float:left;
+	padding:0 3px
+}
+dl.article-info {
+	clear:both;
+}
+/*
+Pagenavigation
+*/
+ul.pagenav {
+	list-style:none;
+	width:100%;
+	float:left;
+	margin:0;
+	padding:0;
+}
+ul.pagenav li {
+	float:left;
+	list-style:none;
+	padding:0 3px
+}
+ul.pagenav li a {
+	padding:4px;
+	border:1px silver solid;
+	color: gray;
+}
+ul.pagenav li a:hover {
+	background-color:silver;
+	color:black
+}
+ul.pagenav li.pagenav-prev {
+	float:left;
+}
+ul.pagenav li.pagenav-next {
+	float:right;
+}
+ul.pagenav li.pagenav-prev a {
+}
+ul.pagenav li.pagenav-next a {
+}
+.pagination {
+	text-align:center
+}
+/*
+Suchergebnis
+*/
+
+dl.search-results {
+/*background:#f5f5f5;*/
+}
+dl.search-results dt.result-title {
+/*border-top:dashed 1px #ddd;*/
+}
+dl.search-results dt.result-created {
+	padding: 5px 0 15px 5px;
+	margin-bottom:12px;
+	border-bottom:1px solid silver;
+	text-align:right
+}
+/*
+Form validation
+*/
+
+.invalid {
+	border-color:red !important;
+}
+label.invalid {
+	color:red;
+}
+/*
+Kontakt
+*/
+.form-l {
+	float:left;
+	width:20%;
+	margin-bottom:12px;
+}
+.form-r {
+	float:left;
+	width:70%;
+	clear:right;
+	margin-bottom:12px;
+}
+.form-l button {
+	margin-top:12px
+}
+.contact input.invalid, .contact textarea.invalid {
+	border:solid 2px red;
+}
+.contact label.invalid {
+	color:red;
+}
+body.contentpane div#all div#main form#mailtoForm {
+	width:330px;
+}
+.formelm {
+	margin:6px 0;
+	clear:both
+}
+body.contentpane div#all div#main form#mailtoForm input {
+	float:right;
+}

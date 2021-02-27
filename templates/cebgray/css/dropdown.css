@@ -1,0 +1,85 @@
+#navwidth {
+	width:700px;
+	float:left;
+}
+#navwidth ul {
+	list-style: none;
+	width: 100%;
+	float: left;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	margin: 0;
+	padding:0;
+	position:relative;
+	left:50px;
+	z-index: 597;
+}
+#navwidth ul li {
+	display: block;
+	float:left;
+	margin: 0;
+	list-style: none;
+}
+#navwidth ul li a {
+	display: block;
+	padding: 17px 15px;
+	color: #fff;
+	background-color: transparent;
+	text-decoration: none;
+}
+#navwidth ul li.active a, #navwidth ul li.current a, #navwidth ul li a:hover, #navwidth ul li.active ul a:hover, #navwidth ul li.current ul a:hover, #navwidth ul li ul a:hover {
+	color: #2FA2FF !important;
+}
+#navwidth ul li.active, #navwidth ul li.current {
+	background:#1F1F1F;
+}
+#navwidth ul li.parent {
+	background-image:url('../images/arrow-nav1.png');
+	background-repeat:no-repeat;
+	background-position: 92% 54%;
+	padding-right:25px;
+}
+#navwidth ul li ul li.parent {
+	background:url('../images/arrow-nav2.png') no-repeat 92% 54%;
+	padding-right:6px;
+}
+#navwidth ul li.active ul a, #navwidth ul li.current ul a {
+	color: #FFF !important;
+}
+#navwidth ul li.hover, #navwidth ul li:hover {
+	position: relative;
+	z-index: 599;
+	cursor: default;
+}
+#navwidth ul ul {
+	visibility: hidden;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 598;
+	width: 100%;
+}
+#navwidth ul ul li {
+	float: none;
+}
+#navwidth ul ul ul {
+	top: 0px;
+	left: 99%;
+}
+#navwidth ul li:hover > ul {
+	visibility: visible;
+}
+#navwidth ul ul {
+	width: 170px;
+	background-color: #333;
+	font-size: 11px;
+	text-transform: none;
+	filter: alpha(opacity=90);
+	-moz-opacity: .9;
+	KhtmlOpacity: .9;
+	opacity: .9;
+}
+#navwidth ul ul a {
+	padding: 4px 5px 4px 14px;
+	width: 151px; /* for IE */
+}

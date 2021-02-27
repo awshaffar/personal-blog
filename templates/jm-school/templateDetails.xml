@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="1.6" type="template" client="site">
+	<name>jm-school</name>
+	<creationDate>14 March 2011</creationDate>
+	<author>Jm-Experts!</author>
+	<authorEmail>templates@jm-experts.com</authorEmail>
+	<authorUrl>http://www.jm-experts.com</authorUrl>
+	<copyright>Jm-Experts!</copyright>
+	<license>Jm-Experts! License</license>
+	<version>1.6.1</version>
+	<description><![CDATA[
+			<h1>jm-school</h1>
+
+			<a href="http://www.jm-experts.com/"><img src="../templates/jm-school/template_thumbnail.png" style="border: 4px solid #ccc; padding: 2px; float: left; margin-bottom: 10px;" /></a>
+<div class="clr"></div><br />Jm-School! is the new template by Jm-Experts March 2011. It is free to public.  <a href="http://www.jm-experts.com">www.jm-experts.com</a>.
+<p>Check out our Other Free Joomla Templates:</p>
+<table  border="0" cellpadding="10" cellspacing="0" >
+  <tr>
+    <td><p align="center"><a href="http://www.jm-experts.com/templates/jm-city-reader"><img src="http://www.jm-experts.com/thumbs/jm_city_reader.jpg" alt="Joomla City Reader Template" width="206" height="166" border="0"></a><BR>
+    <a href="http://www.jm-experts.com/templates/jm-city-reader" target="_blank">JM City Reader</a></p></td>
+    <td><div align="center"><a href="http://www.jm-experts.com/templates/jm-experts-free-joomla-1-5-template"><img src="http://www.jm-experts.com/thumbs/jm_expert.jpg" alt="Joomla Experts Template" width="206" height="166" border="0"></a><BR>
+    <a href="http://www.jm-experts.com/templates/jm-city-reader" target="_blank">JM Experts Template</a></div></td>
+    <td><div align="center"><a href="http://www.jm-experts.com/templates/jm-mica-templater"><img src="http://www.jm-experts.com/thumbs/jm_fun.jpg" alt="JM Mica Template" width="206" height="166" border="0"></a><BR>
+    <a href="http://www.jm-experts.com/templates/jm-mica-template" target="_blank">JM Mica </a></div></td>
+  </tr>
+  <tr>
+    <td><div align="center"><a href="http://www.jm-experts.com/templates/jm-fun-template"><img src="http://www.jm-experts.com/thumbs/jm_mica.jpg" alt="Joomla Fun Template" width="206" height="166" border="0"></a><BR>
+    <a href="http://www.jm-experts.com/templates/jm-fun-template" target="_blank">JM Fun</a></div></td>
+    <td><div align="center"><a href="http://www.jm-experts.com/templates/jm-experts-free-joomla-template-4"><img src="http://www.jm-experts.com/thumbs/jm_tmpl4.jpg" alt="Joomla Template 4" width="206" height="166" border="0"></a><BR>
+    <a href="http://www.jm-experts.com/templates/jm-experts-free-joomla-template-4" target="_blank">Joomla Template 4</a></div></td>
+    <td><div align="center"><a href="http://www.jm-experts.com/templates/jm-design-lab" target="_blank"><img src="http://www.jm-experts.com/thumbs/jm-designlab.jpg" alt="JM Design Lab" width="206" height="166" border="0"><BR>
+    JM Design Lab</a><a href="http://www.jm-experts.com/templates/jm-city-reader" target="_blank"></a></div></td>
+  </tr>
+  <tr>
+    <td><div align="center"><a href="http://www.jm-experts.com/templates/jm-rainbow"><img src="http://www.jm-experts.com/thumbs/jm-rainbow.jpg" alt="JM Rainbow Template" width="206" height="166" border="0"></a><BR>
+    <a href="http://www.jm-experts.com/templates/jm-rainbow" target="_blank">JM Rainbow Template</a></div></td>
+    <td><div align="center"><a href="http://www.jm-experts.com/templates/jm-rocket"><img src="http://www.jm-experts.com/thumbs/jm-rocket.jpg" alt="JM rocket" width="206" height="166" border="0"></a><BR>
+    <a href="http://www.jm-experts.com/templates/jm-rocket" target="_blank">JM Rocket</a></div></td>
+    <td><div align="center"><a href="http://www.jm-experts.com/templates/joomla-simple-template" target="_blank"><img src="http://www.jm-experts.com/thumbs/jm-simple1.jpg" alt="Joomla Simple Template" width="206" height="166" border="0"></a><BR>
+    <a href="http://www.jm-experts.com/templates/joomla-simple-template" target="_blank">JM City Reader</a></div></td>
+  </tr>
+</table>
+
+			]]> </description>
+
+	<files>
+		<folder>css</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>javascript</folder>
+		<folder>fonts</folder>
+		<folder>language</folder>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>favicon.ico</filename>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+	</files>
+
+	<positions>
+		<position>position-0</position>
+		<position>position-15</position>
+		<position>position-1</position>
+		<position>position-2</position>
+		<position>position-3</position>
+		<position>position-4</position>
+		<position>position-5</position>
+		<position>position-6</position>
+		<position>position-7</position>
+		<position>position-8</position>
+		<position>position-9</position>
+		<position>position-10</position>
+		<position>position-11</position>
+		<position>position-12</position>
+		<position>position-13</position>
+		<position>position-14</position>
+	</positions>
+	
+	<!-- 	For core templates, we also install/uninstall the language files in the core language folders.
+	-->
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_jm-school.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_jm-school.sys.ini</language>
+	</languages>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+				 <field name="wrapperSmall" type="text" default="53"
+					label="TPL_JM-SCHOOL_FIELD_WRAPPERSMALL_LABEL"
+					description="TPL_JM-SCHOOL_FIELD_WRAPPERSMALL_DESC"
+					filter="int" />
+
+				<field name="wrapperLarge" type="text" default="72"
+					label="TPL_JM-SCHOOL_FIELD_WRAPPERLARGE_LABEL"
+					description="TPL_JM-SCHOOL_FIELD_WRAPPERLARGE_DESC"
+					filter="int" />
+<!--				<field name="logo" type="media"
+					hide_default="1"
+					label="TPL_JM-SCHOOL_FIELD_LOGO_LABEL" description="TPL_JM-SCHOOL_FIELD_LOGO_DESC" />
+ -->
+				<field name="sitetitle"  type="text" default=""
+					label="TPL_JM-SCHOOL_FIELD_SITETITLE_LABEL"
+					description="TPL_JM-SCHOOL_FIELD_SITETITLE_DESC"
+					filter="string" />
+
+				<field name="sitedescription"  type="text" default=""
+					label="TPL_JM-SCHOOL_FIELD_DESCRIPTION_LABEL"
+					description="TPL_JM-SCHOOL_FIELD_DESCRIPTION_DESC"
+					filter="string" />
+
+				<field name="navposition" type="list" default="left"
+					label="TPL_JM-SCHOOL_FIELD_NAVPOSITION_LABEL"
+					description="TPL_JM-SCHOOL_FIELD_NAVPOSITION_DESC"
+					filter="word"
+				>
+					<option value="center">TPL_JM-SCHOOL_OPTION_AFTER_CONTENT</option>
+					<option value="left">TPL_JM-SCHOOL_OPTION_BEFORE_CONTENT</option>
+				</field>
+
+				<field name="html5" type="list" default="0"
+					label="TPL_JM-SCHOOL_FIELD_HTML5_LABEL"
+					description="TPL_JM-SCHOOL_FIELD_HTML5_DESC"
+					filter="int"
+				>
+					<option value="0">TPL_JM-SCHOOL_OPTION_XHTML</option>
+					<option value="1">TPL_JM-SCHOOL_OPTION_HTML5</option>
+				</field>
+				
+				<field name="fontchange" type="list" default="0"
+					label="TPL_JM-SCHOOL_FONTCHANGE_LABEL"
+					description="TPL_JM-SCHOOL_FIELD_FONT_DESC"
+					filter="int"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
