@@ -161,6 +161,11 @@ $keys = array(
 		)
 	),
 
+	'docroot_fix.enable' => array(
+		'type' => 'boolean',
+		'default' => false,
+	),
+
 	'lazyload.enabled' => array(
 		'type' => 'boolean',
 		'default' => false
@@ -316,7 +321,6 @@ $keys = array(
 	'objectcache.groups.nonpersistent' => array(
 		'type' => 'array',
 		'default' => array(
-			'comment',
 			'counts',
 			'plugins'
 		)
@@ -836,10 +840,6 @@ $keys = array(
 			'mfunc'
 		)
 	),
-	'minify.css.combine' => array(
-		'type' => 'boolean',
-		'default' => false
-	),
 	'minify.css.enable' => array(
 		'type' => 'boolean',
 		'default' => true
@@ -847,6 +847,10 @@ $keys = array(
 	'minify.css.engine' => array(
 		'type' => 'string',
 		'default' => 'css'
+	),
+	'minify.css.method' => array(
+		'type' => 'string',
+		'default' => 'both'
 	),
 	'minify.css.http2push' => array(
 		'type' => 'boolean',
@@ -883,6 +887,10 @@ $keys = array(
 	'minify.js.engine' => array(
 		'type' => 'string',
 		'default' => 'js'
+	),
+	'minify.js.method' => array(
+		'type' => 'string',
+		'default' => 'both'
 	),
 	'minify.js.combine.header' => array(
 		'type' => 'boolean',

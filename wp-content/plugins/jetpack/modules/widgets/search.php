@@ -15,7 +15,7 @@ add_action( 'widgets_init', 'jetpack_search_widget_init' );
 
 function jetpack_search_widget_init() {
 	if (
-		! Jetpack::is_active()
+		! Jetpack::is_connection_ready()
 		|| ( method_exists( 'Jetpack_Plan', 'supports' ) && ! Jetpack_Plan::supports( 'search' ) )
 	) {
 		return;
@@ -649,7 +649,7 @@ class Jetpack_Search_Widget extends WP_Widget {
 		$filters = array();
 		if ( isset( $new_instance['filter_type'] ) ) {
 			foreach ( (array) $new_instance['filter_type'] as $index => $type ) {
-				$count = intval( $new_instance['num_filters'][ $index ] );
+				$count = (int) $new_instance['num_filters'][ $index ];
 				$count = min( 50, $count ); // Set max boundary at 50.
 				$count = max( 1, $count );  // Set min boundary at 1.
 

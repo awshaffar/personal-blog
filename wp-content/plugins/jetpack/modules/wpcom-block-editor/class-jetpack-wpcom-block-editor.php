@@ -4,9 +4,10 @@
  * Allow new block editor posts to be composed on WordPress.com.
  * This is auto-loaded as of Jetpack v7.4 for sites connected to WordPress.com only.
  *
- * @package Jetpack
+ * @package automattic/jetpack
  */
 
+use Automattic\Jetpack\Connection\Tokens;
 /**
  * WordPress.com Block editor for Jetpack
  */
@@ -35,11 +36,27 @@ class Jetpack_WPCOM_Block_Editor {
 	 * Jetpack_WPCOM_Block_Editor constructor.
 	 */
 	private function __construct() {
+		add_action( 'init', array( $this, 'init_actions' ) );
+	}
+
+	/**
+	 * Add in all hooks.
+	 */
+	public function init_actions() {
+		// Bail early if Jetpack's block editor extensions are disabled on the site.
+		/* This filter is documented in class.jetpack-gutenberg.php */
+		if ( ! apply_filters( 'jetpack_gutenberg', true ) ) {
+			return;
+		}
+
 		if ( $this->is_iframed_block_editor() ) {
 			add_action( 'admin_init', array( $this, 'disable_send_frame_options_header' ), 9 );
 			add_filter( 'admin_body_class', array( $this, 'add_iframed_body_class' ) );
 		}
 
+		require_once __DIR__ . '/functions.editor-type.php';
+		add_action( 'edit_form_top', 'Jetpack\EditorType\remember_classic_editor' );
+		add_filter( 'block_editor_settings', 'Jetpack\EditorType\remember_block_editor', 10, 2 );
 		add_action( 'login_init', array( $this, 'allow_block_editor_login' ), 1 );
 		add_action( 'enqueue_block_editor_assets', array( $this, 'enqueue_block_editor_assets' ), 9 );
 		add_action( 'enqueue_block_assets', array( $this, 'enqueue_block_assets' ) );
@@ -221,7 +238,7 @@ class Jetpack_WPCOM_Block_Editor {
 			return false;
 		}
 
-		$token = Jetpack_Data::get_access_token( $this->nonce_user_id );
+		$token = ( new Tokens() )->get_access_token( $this->nonce_user_id );
 		if ( ! $token ) {
 			return false;
 		}
@@ -265,7 +282,7 @@ class Jetpack_WPCOM_Block_Editor {
 	 */
 	public function filter_salt( $salt, $scheme ) {
 		if ( 'jetpack_frame_nonce' === $scheme ) {
-			$token = Jetpack_Data::get_access_token( $this->nonce_user_id );
+			$token = ( new Tokens() )->get_access_token( $this->nonce_user_id );
 
 			if ( $token ) {
 				$salt = $token->secret;
@@ -290,6 +307,7 @@ class Jetpack_WPCOM_Block_Editor {
 			array(
 				'jquery',
 				'lodash',
+				'wp-annotations',
 				'wp-compose',
 				'wp-data',
 				'wp-editor',
@@ -304,11 +322,6 @@ class Jetpack_WPCOM_Block_Editor {
 			'wpcom-block-editor-default-editor-script',
 			'wpcomGutenberg',
 			array(
-				'switchToClassic' => array(
-					'isVisible' => $this->is_iframed_block_editor() && ! isset( $_GET['in-editor-deprecation-group'] ), // phpcs:ignore WordPress.Security.NonceVerification
-					'label'     => __( 'Switch to Classic Editor', 'jetpack' ),
-					'url'       => Jetpack_Calypsoify::getInstance()->get_switch_to_classic_editor_url(),
-				),
 				'richTextToolbar' => array(
 					'justify'   => __( 'Justify', 'jetpack' ),
 					'underline' => __( 'Underline', 'jetpack' ),
