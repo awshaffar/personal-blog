@@ -11,65 +11,74 @@
 		"ext-fileinfo": "*",
 		"ext-json": "*",
 		"ext-openssl": "*",
-		"automattic/jetpack-a8c-mc-stats": "^1.4",
-		"automattic/jetpack-abtest": "^1.9",
-		"automattic/jetpack-assets": "^1.11",
-		"automattic/jetpack-autoloader": "^2.10",
-		"automattic/jetpack-backup": "^1.0",
-		"automattic/jetpack-blocks": "^1.3",
-		"automattic/jetpack-compat": "^1.6",
-		"automattic/jetpack-config": "^1.4",
-		"automattic/jetpack-connection": "^1.25",
-		"automattic/jetpack-connection-ui": "^1.0",
-		"automattic/jetpack-constants": "^1.6",
-		"automattic/jetpack-device-detection": "^1.4",
-		"automattic/jetpack-error": "^1.3",
-		"automattic/jetpack-heartbeat": "^1.3",
-		"automattic/jetpack-jitm": "^1.14",
-		"automattic/jetpack-lazy-images": "^1.4",
-		"automattic/jetpack-licensing": "^1.4",
-		"automattic/jetpack-logo": "^1.5",
-		"automattic/jetpack-options": "^1.11",
-		"automattic/jetpack-partner": "^1.4",
-		"automattic/jetpack-password-checker": "^0.1.0",
-		"automattic/jetpack-redirect": "^1.5",
-		"automattic/jetpack-roles": "^1.4",
-		"automattic/jetpack-status": "^1.7",
-		"automattic/jetpack-sync": "^1.21",
-		"automattic/jetpack-terms-of-service": "^1.9",
-		"automattic/jetpack-tracking": "^1.13",
-		"nojimage/twitter-text-php": "3.1.1"
+		"automattic/jetpack-a8c-mc-stats": "^1.4.17",
+		"automattic/jetpack-abtest": "^1.10.11",
+		"automattic/jetpack-action-bar": "^0.1.7",
+		"automattic/jetpack-assets": "^1.17.28",
+		"automattic/jetpack-autoloader": "^2.11.14",
+		"automattic/jetpack-backup": "^1.10.6",
+		"automattic/jetpack-blaze": "^0.3.3",
+		"automattic/jetpack-blocks": "^1.4.18",
+		"automattic/jetpack-compat": "^1.7.5",
+		"automattic/jetpack-composer-plugin": "^1.1.8",
+		"automattic/jetpack-config": "^1.13.0",
+		"automattic/jetpack-connection": "^1.48.1",
+		"automattic/jetpack-constants": "^1.6.20",
+		"automattic/jetpack-device-detection": "^1.4.22",
+		"automattic/jetpack-error": "^1.3.18",
+		"automattic/jetpack-google-fonts-provider": "^0.4.0",
+		"automattic/jetpack-identity-crisis": "^0.8.33",
+		"automattic/jetpack-jitm": "^2.2.36",
+		"automattic/jetpack-lazy-images": "^2.1.29",
+		"automattic/jetpack-licensing": "^1.7.13",
+		"automattic/jetpack-logo": "^1.5.20",
+		"automattic/jetpack-my-jetpack": "^2.7.2.1",
+		"automattic/jetpack-partner": "^1.7.21",
+		"automattic/jetpack-plugins-installer": "^0.2.2",
+		"automattic/jetpack-post-list": "^0.4.3",
+		"automattic/jetpack-publicize": "^0.19.0",
+		"automattic/jetpack-redirect": "^1.7.22",
+		"automattic/jetpack-roles": "^1.4.20",
+		"automattic/jetpack-search": "^0.31.2.1",
+		"automattic/jetpack-stats": "^0.4.0",
+		"automattic/jetpack-stats-admin": "^0.2.1",
+		"automattic/jetpack-status": "^1.15.3",
+		"automattic/jetpack-sync": "^1.46.0",
+		"automattic/jetpack-videopress": "^0.10.1",
+		"automattic/jetpack-waf": "^0.8.0",
+		"automattic/jetpack-wordads": "^0.2.27",
+		"nojimage/twitter-text-php": "3.1.2"
 	},
 	"require-dev": {
-		"automattic/jetpack-changelogger": "^1.1"
+		"antecedent/patchwork": "2.1.21",
+		"automattic/jetpack-changelogger": "^3.3.0",
+		"johnkary/phpunit-speedtrap": "^4.0.0 || ^2.0.0 || ^1.1.0",
+		"yoast/phpunit-polyfills": "1.0.4"
 	},
 	"scripts": {
 		"build-production": [
-			"Composer\\Config::disableProcessTimeout",
-			"yarn build-production-concurrently"
+			"pnpm run build-production-concurrently"
 		],
 		"build-development": [
-			"Composer\\Config::disableProcessTimeout",
-			"yarn build-concurrently"
+			"pnpm run build-concurrently"
+		],
+		"phpunit": [
+			"tests/action-phpunit.sh"
 		],
 		"test-coverage": [
-			"Composer\\Config::disableProcessTimeout",
-			"@composer install",
+			"@php tools/build-module-headings-translations.php",
 			"tests/action-test-coverage.sh"
 		],
 		"test-js": [
-			"Composer\\Config::disableProcessTimeout",
-			"yarn install",
-			"yarn concurrently 'yarn:test-adminpage' 'yarn:test-extensions' 'yarn:test-search'"
+			"pnpm concurrently 'pnpm:test-adminpage' 'pnpm:test-extensions'"
 		],
 		"test-php": [
-			"Composer\\Config::disableProcessTimeout",
-			"@composer install",
+			"@php tools/build-module-headings-translations.php",
 			"tests/action-test-php.sh"
 		],
 		"watch": [
 			"Composer\\Config::disableProcessTimeout",
-			"yarn watch"
+			"pnpm run watch"
 		]
 	},
 	"repositories": [],
@@ -85,7 +94,11 @@
 		"platform": {
 			"ext-intl": "0.0.0"
 		},
-		"autoloader-suffix": "f11009ded9fc4592b6a05b61ce272b3cjetpack"
+		"autoloader-suffix": "f11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ11_7_1",
+		"allow-plugins": {
+			"automattic/jetpack-autoloader": true,
+			"automattic/jetpack-composer-plugin": true
+		}
 	},
 	"extra": {
 		"mirror-repo": "Automattic/jetpack-production",
@@ -94,13 +107,16 @@
 			"JETPACK__VERSION": "jetpack.php"
 		},
 		"wp-plugin-slug": "jetpack",
+		"dev-releases": true,
+		"changelogger-default-type": "other",
 		"changelogger": {
 			"versioning": "wordpress",
 			"types": {
 				"major": "Major Enhancements",
 				"enhancement": "Enhancements",
 				"compat": "Improved compatibility",
-				"bugfix": "Bug fixes"
+				"bugfix": "Bug fixes",
+				"other": "Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->"
 			}
 		}
 	}

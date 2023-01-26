@@ -2,6 +2,8 @@
 /** Enable W3 Total Cache */
 define('WP_CACHE', true); // Added by W3 Total Cache
 
+
+
 /**
  * The base configurations of the WordPress.
  *
@@ -35,6 +37,7 @@ define('DB_CHARSET', 'utf8');
 
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
+define('DISABLE_WP_CRON', true);
 
 /**#@+
  * Authentication Unique Keys and Salts.

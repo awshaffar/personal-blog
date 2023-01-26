@@ -1,13 +1,12 @@
 <?php
 /**
  * Module Name: Sharing
- * Module Description: Add Twitter, Facebook and Google+ buttons at the bottom of each post, making it easy for visitors to share your content.
+ * Module Description: Add Twitter and Facebook buttons at the bottom of each post, making it easy for visitors to share your content.
  * Sort Order: 7
  * Recommendation Order: 6
  * First Introduced: 1.1
  * Major Changes In: 1.2
  * Requires Connection: No
- * Requires User Connection: Yes
  * Auto Activate: No
  * Module Tags: Social, Recommended
  * Feature: Engagement

@@ -1,0 +1,4 @@
+[23-Aug-2022 19:50:01 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/abdurra4/public_html/wp-content/themes/twentyseventeen/inc/template-tags.php:199
+Stack trace:
+#0 {main}
+  thrown in /home/abdurra4/public_html/wp-content/themes/twentyseventeen/inc/template-tags.php on line 199

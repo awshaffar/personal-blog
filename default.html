@@ -1,79 +1,51 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#009eed">
+    <link rel="icon" href="//static.domainesia.com/assets/images/favicon/favicon.ico">
+    <link rel="icon" href="//static.domainesia.com/assets/images/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="//static.domainesia.com/assets/images/favicon/apple-touch-icon-180.png">
     <meta name="description" content="Your website is ready to be launched. Hosted by DomaiNesia.">
-    <title>Launch Page</title>
-    <link rel="shortcut icon" href="https://files.domainesia.com/repo/cpanel-assets/defaults/favicon.png">
-    <link rel="stylesheet" type="text/css" href="https://files.domainesia.com/repo/cpanel-assets/defaults/css/default.css">
-    <script type="text/javascript" src="https://files.domainesia.com/repo/cpanel-assets/defaults/js/jquery-1.10.2-min.js"></script>
-    <script type="text/javascript" src="https://files.domainesia.com/repo/cpanel-assets/defaults/js/wright-custom.js"></script>
-
+    <title>Hosted by DomaiNesia - Your website is ready to be launched</title>
+    <link href="//static.domainesia.com/assets/slots/webcdn/cpanel/css/framework.min.css" rel="stylesheet">
 </head>
-<body>
-    <!--     Wrapper     -->
-    <div id="wrapper" class="gradient">
-	<!--  Header  -->
-	<div id="logoimg">
-    <!--  Company Logo  -->
-    <a href="https://www.domainesia.com"><img style="max-width:18rem;" src="https://static.domainesia.com/assets/images/logo-domainesia-v4.png" alt="Hosting Indonesia" title="Hosting Indonesia"/></a>
-	</div> <!--  End Header  -->
-        <!--     Background Elements     -->
-        <div class="skyelement jupiter"></div>
-        <div class="skyelement planet"></div>
-        <div class="skyelement mount"></div>
-        <div class="ccontainer">
-            <div id="clouds">
-                <div class="skyelement cloud1"></div>
-                <div class="skyelement cloud2"></div>
-            </div>
-            <div id="clouds2">
-                <div class="skyelement cloud3"></div>
-                <div class="skyelement cloud4"></div>
-                <div class="skyelement cloud5"></div>
-            </div>
-            <div id="clouds3">
-                <div class="skyelement cloud1"></div>
-                <div class="skyelement cloud2"></div>
-                <div class="skyelement cloud3"></div>
-                <div class="skyelement cloud4"></div>
-                <div class="skyelement cloud5"></div>
-            </div>
-		</div>
-        <div class="skyelement ground"></div>
-        <div class="skyelement mushroom"></div>
-        <div class="skyelement tree"></div>
-        <div class="skyelement rocket"></div>
+<body class="overflow-hidden bg-brown mx-auto" style="max-width: 2000px;">
+    <div class="parallax relative">
+        <div class="bg-gradient-to-b from-blue-600 to-blue-400 aspect-video">
+            <span class="absolute top-10 left-10 w-56"><img src="//static.domainesia.com/assets/slots/webcdn/cpanel/img/landing/domainesia-logo.svg" alt="DomaiNesia Logo"></span>
+            <span value="4" class="move absolute" style="top:-6%;"><img src="//static.domainesia.com/assets/slots/webcdn/cpanel/img/landing/bg-milky-way.svg" alt="DomaiNesia Milky Way"></span>
+            <span value="2" class="move absolute" style="top:30%;"><img src="//static.domainesia.com/assets/slots/webcdn/cpanel/img/landing/bg-hills-v2.svg" alt="DomaiNesia Hills"></span>
+            <span class="absolute" style="top:14%;"><img src="//static.domainesia.com/assets/slots/webcdn/cpanel/img/landing/ground-ready-to-launch.svg" alt="DomaiNesia Moon"></span>
+            <span class="absolute animate-fadeandmove -left-10" style="top:9%;"><img src="//static.domainesia.com/assets/slots/webcdn/cpanel/img/landing/clouds.svg" alt="DomaiNesia Clouds"></span>
+        </div>
+        <div class="absolute left-1/2 transform -translate-x-1/2 text-center text-white block z-50 w-full px-8" style="top: 82%;">
+            <p class="mb-1 text-xs md:text-base lg:text-lg">
+                Halaman ini merupakan halaman bawaan. Silakan upload konten website Anda.
 
-        <!--     Content Box      -->
-        <div class="skyelement content">
-        	<!--     Inner Box      -->
-        	<div class="inner">
-                <div class="chain1"></div>
-                <div class="chain2"></div>
-                <!--   Title for Content Box    -->
-                <h1>Ready to Launch</h1>
-                <p id="domainesia">
-                Website is ready to be launched<br>Please upload your content<br>to <strong>public_html</strong> directory
-                <br><br>
-                We hope you have a good day!<br>
-                - DomaiNesia
-                </p>
-			</div> <!--    End Inner Box      -->
-        </div> <!--    End Content Box      -->
-    </div> <!--    End Wrapper     -->
-    <div id="footer">
-        <div>
-            
-            <p style="color:#fff;">
-            Halaman ini merupakan halaman default. Silakan upload konten website anda.
-            </p>
-            <br><br><br>
-            <p>
-            Top Provider Cloud Web Hosting di Indonesia: <a href="https://www.domainesia.com/hosting/">Hosting</a><br>
-            Daftarkan Nama Domain dengan Mudah dan Murah: <a href="https://www.domainesia.com/domain/">Domain</a>
+                <br />
+
+                Luncurkan Aplikasi Web dengan Cloud VPS Berperforma Tinggi.
+
+                <br />
+
+                DomaiNesia Penyedia Web Hosting Murah Terbaik di Indonesia. Cek & <a class="text-blue-500 hover:text-blue-600" href="https://www.domainesia.com/domain/" target="_blank" rel="noopener noreferrer">Daftarkan Nama Domain</a> dengan Mudah.
             </p>
         </div>
     </div>
+
+    <script>
+        document.addEventListener("mousemove", parallax);
+        function parallax(event) {
+            this.querySelectorAll(".parallax .move").forEach((shift) => {
+                const position = shift.getAttribute("value");
+                const x = (window.innerWidth - event.pageX * position) / 80;
+                const y = (window.innerHeight - event.pageY * position) / 80;
+
+                shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
+            });
+        }
+    </script>
 </body>
 </html>

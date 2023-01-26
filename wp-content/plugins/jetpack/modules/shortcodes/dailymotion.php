@@ -36,12 +36,12 @@ function dailymotion_embed_to_shortcode( $content ) {
 		}
 
 		foreach ( $matches as $match ) {
-			$src    = html_entity_decode( $match[3] );
+			$src    = html_entity_decode( $match[3], ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401 );
 			$params = $match[2] . $match[4];
 
 			if ( 'regexp_ent' === $reg ) {
-				$src    = html_entity_decode( $src );
-				$params = html_entity_decode( $params );
+				$src    = html_entity_decode( $src, ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401 );
+				$params = html_entity_decode( $params, ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401 );
 			}
 
 			$params = wp_kses_hair( $params, array( 'http' ) );
@@ -236,6 +236,25 @@ function dailymotion_shortcode( $atts ) {
 					),
 				)
 			) . '</em>';
+		}
+	}
+
+	/**
+	 * Calypso Helper
+	 *
+	 * Makes shortcode output responsive to the location it is loaded:
+	 * Notifications, Reader, Email
+	 */
+	if ( defined( 'IS_WPCOM' ) && IS_WPCOM ) {
+		require_once WP_CONTENT_DIR . '/lib/display-context.php';
+		$context = A8C\Display_Context\get_current_context();
+
+		// Notifications.
+		if ( A8C\Display_Context\NOTIFICATIONS === $context ) {
+			return sprintf(
+				'<a href="%1$s" target="_blank" rel="noopener noreferrer">%1$s</a>',
+				esc_url( 'https://www.dailymotion.com/video/' . $id )
+			);
 		}
 	}
 
